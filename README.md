@@ -4,9 +4,6 @@
 ## Overview
 ![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png)
 
-![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/ros_test.gif)
-
-
 **Original package developed by [Marko Bjelonic](https://www.markobjelonic.com), Affiliation: [Robotic Systems Lab](http://www.rsl.ethz.ch/), ETH Zurich**
 ## Citing
 
@@ -120,6 +117,8 @@ Here is what the launch file should look like, you will also need [gscam](https:
   </node>
 </launch>
 ```
+
+![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/ros_test.gif)
 
 ## Basic Usage
 
