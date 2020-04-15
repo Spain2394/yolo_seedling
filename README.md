@@ -88,8 +88,7 @@ To run yolo seedling run:
     roslaunch plant_weed_yolo_v3_tiny.launch
     
 Make sure you have something publishing to the  ```/rgb/image_raw``` topic, for the Jetpack 4.3
-modify the launch file so that it works for the CSI camera [jetson_csi_cam](https://github.com/peter-moran/jetson_csi_cam): 
-Here is what the launch file should look like, you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for converting the image stream from the csi camera to a ros data message format.
+modify the launch file so that it works for the CSI camera [jetson_csi_cam](https://github.com/peter-moran/jetson_csi_cam), as shown below.
 
 ```<launch>
   <!-- Command Line Arguments -->
@@ -120,6 +119,7 @@ Here is what the launch file should look like, you will also need [gscam](https:
   </node>
 </launch>
 ```
+you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for converting the image stream from the csi camera to a ros data message format.
 
 ![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/ros_test.gif)
 
