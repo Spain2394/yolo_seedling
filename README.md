@@ -54,9 +54,11 @@ Darknet on the CPU is fast (approximately 1.5 seconds on an Intel Core i7-6700HQ
 
     nvcc fatal : Unsupported gpu architecture 'compute_61'.
 
-This means that you need to check the compute capability (version) of your GPU. You can find a list of supported GPUs in CUDA here: [CUDA - WIKIPEDIA](https://en.wikipedia.org/wiki/CUDA#Supported_GPUs). Simply find the compute capability of your GPU and add it into darknet_ros/CMakeLists.txt. Simply add a similar line like
+This means that you need to check the compute capability (version) of your GPU. You can find a list of supported GPUs in CUDA here: [CUDA - WIKIPEDIA](https://en.wikipedia.org/wiki/CUDA#Supported_GPUs). Simply find the compute capability of your GPU and add it into darknet_ros/CMakeLists.txt. Simply add a similar line like. For the Jetson Tx2 simple add to your CMakeList.txt.
 
-    -O3 -gencode arch=compute_62,code=sm_62
+    -O3
+    -gencode arch=compute_53,code=[sm_53,compute_53]
+    -gencode arch=compute_62,code=[sm_62,compute_62]
 
 ### Download weights
 
