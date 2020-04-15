@@ -32,15 +32,15 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 - [OpenCV](http://opencv.org/) (computer vision library),
 - [boost](http://www.boost.org/) (c++ library),
 
-### Building
 
-[![Build Status](https://ci.leggedrobotics.com/buildStatus/icon?job=github_leggedrobotics/darknet_ros/master)](https://ci.leggedrobotics.com/job/github_leggedrobotics/job/darknet_ros/job/master/)
-
-In order to install darknet_ros, clone the latest version using SSH (see [how to set up an SSH key](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)) from this repository into your catkin workspace and compile the package using ROS.
+## Setup
+In order to install darknet_ros, clone branch opencv4
 
     cd catkin_workspace/src
-    git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
+    git clone https://github.com/UGA-BSAIL/darknet_ros.git --branch opencv4
     cd ../
+    
+In order to install the correct darknet framework ```git clone https://github.com/Spain2394/darknet.git --branch tx2_opencv4``` into your ```~/catkin_workspace/src/darknet_ros``` 
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
