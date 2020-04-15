@@ -61,20 +61,10 @@ This means that you need to check the compute capability (version) of your GPU. 
     -gencode arch=compute_62,code=[sm_62,compute_62]
 
 ### Download weights
+Get ```yolo_seedling``` by downloading the yolo_weights from here  https://doi.org/10.6084/m9.figshare.12132951.v1 and placing them in the ```catkin_ws/src/darknet_ros/darknet_ros/yolo_network_config/weights```
 
-The yolo-voc.weights and tiny-yolo-voc.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the COCO data set:
 
-    cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
-    wget http://pjreddie.com/media/files/yolov2.weights
-    wget http://pjreddie.com/media/files/yolov2-tiny.weights
-
-And weights from the VOC data set can be found here:
-
-    wget http://pjreddie.com/media/files/yolov2-voc.weights
-    wget http://pjreddie.com/media/files/yolov2-tiny-voc.weights
-
-And the pre-trained weight from YOLO v3 can be found here:
-
+You can also use some pre-trained weight from YOLO v3 can be found here:
     wget http://pjreddie.com/media/files/yolov3-voc.weights
     wget http://pjreddie.com/media/files/yolov3.weights
 
@@ -89,17 +79,45 @@ In addition, you need to create your config file for ROS where you define the na
 
     catkin_workspace/src/darknet_ros/darknet_ros/config/
 
-Then in the launch file you have to point to your new config file in the line:
 
-    <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/your_config_file.yaml"/>
+### Test
+To run yolo seedling run:
 
-### Unit Tests
+    roslaunch plant_weed_yolo_v3_tiny.launch
+    
+Make sure you have something publishing to the  ```/rgb/image_raw``` topic, for the Jetpack 4.3
+modify the launch file so that it works for the CSI camera [jetson_csi_cam](https://github.com/peter-moran/jetson_csi_cam): 
+Here is what the launch file should look like, you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for visualizing the video stream
 
-Run the unit tests using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/latest/index.html#)
+```<launch>
+  <!-- Command Line Arguments -->
+  <arg name="sensor_id" default="0" />                       <!-- The sensor id of the camera -->
+  <arg name="cam_name" default="csi_cam_$(arg sensor_id)" /> <!-- The name of the camera (corrsponding to the camera info) -->
+  <arg name="frame_id" default="/$(arg cam_name)_link" />    <!-- The TF frame ID. -->
+  <arg name="sync_sink" default="true" />                    <!-- Synchronize the app sink. Setting this to false may resolve problems with sub-par framerates. -->
+  <arg name="width" default="1920" />                        <!-- Image Width -->
+  <arg name="height" default="1080" />                       <!-- Image Height -->
+  <arg name="fps" default="30" />                            <!-- Desired framerate. True framerate may not reach this if set too high. -->
 
-    catkin build darknet_ros --no-deps --verbose --catkin-make-args run_tests
+  <!-- Make arguments available to parameter server -->
+  <param name="$(arg cam_name)/camera_id" type="int" value="$(arg sensor_id)" />
+  <param name="$(arg cam_name)/image_width" type="int" value="$(arg width)" />
+  <param name="$(arg cam_name)/image_height" type="int" value="$(arg height)" />
+  <param name="$(arg cam_name)/target_fps" type="int" value="$(arg fps)" />
 
-You will see the image above popping up.
+  <!-- Define the GSCAM pipeline -->
+  <env name="GSCAM_CONFIG" value="nvarguscamerasrc sensor-id=$(arg sensor_id) ! video/x-raw(memory:NVMM), width=(int)$(arg width), height=(int)$(arg height), format=(string)NV12, framerate=(fraction)$(arg fps)/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert"/>
+
+  <!-- Start the GSCAM node -->
+  <node pkg="gscam" type="gscam" name="$(arg cam_name)">
+    <param name="camera_name" value="$(arg cam_name)" />
+    <param name="frame_id" value="$(arg frame_id)" />
+    <param name="sync_sink" value="$(arg sync_sink)" />
+    <remap from="camera/image_raw" to="$(arg cam_name)/image_raw" />
+    <remap from="/set_camera_info" to="$(arg cam_name)/set_camera_info" />
+  </node>
+</launch>
+```
 
 ## Basic Usage
 
