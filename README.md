@@ -2,9 +2,9 @@
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
 
 ## Overview
-![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/doc/yolo_seedling.png)
+![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png)
 
-![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/doc/ros_test.gif)
+![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/ros_test.gif)
 
 
 **Original package developed by [Marko Bjelonic](https://www.markobjelonic.com), Affiliation: [Robotic Systems Lab](http://www.rsl.ethz.ch/), ETH Zurich**
