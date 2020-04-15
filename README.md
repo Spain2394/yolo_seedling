@@ -86,7 +86,7 @@ To run yolo seedling run:
     
 Make sure you have something publishing to the  ```/rgb/image_raw``` topic, for the Jetpack 4.3
 modify the launch file so that it works for the CSI camera [jetson_csi_cam](https://github.com/peter-moran/jetson_csi_cam): 
-Here is what the launch file should look like, you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for visualizing the video stream
+Here is what the launch file should look like, you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for converting the image stream from the csi camer to a ros data message format.
 
 ```<launch>
   <!-- Command Line Arguments -->
