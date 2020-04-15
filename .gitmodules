@@ -1,0 +1,4 @@
+[submodule "darknet"]
+	path = darknet
+	url = https://github.com/Spain2394/darknet
+	branch = tx2_opencv4 
