@@ -40,9 +40,9 @@ In order to install darknet_ros, clone branch opencv4
     cd ../
     
 In order to install the correct verions of the darknet framework, clone branch tx2_opencv4
-    
+
+    cd ~/catkin_workspace/src/darknet_ros/
     git clone https://github.com/Spain2394/darknet.git --branch tx2_opencv4
-    ~/catkin_workspace/src/darknet_ros``` 
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
