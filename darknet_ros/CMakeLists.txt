@@ -3,6 +3,8 @@ project(darknet_ros)
 
 # Set c++11 cmake flags
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -fPIC -fpermissive ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Define path of darknet folder here.
 find_path(DARKNET_PATH
@@ -21,12 +23,8 @@ if (CUDA_FOUND)
     CUDA_NVCC_FLAGS
     ${CUDA_NVCC_FLAGS};
     -O3
-    -gencode arch=compute_30,code=sm_30
-    -gencode arch=compute_35,code=sm_35
-    -gencode arch=compute_50,code=[sm_50,compute_50]
-    -gencode arch=compute_52,code=[sm_52,compute_52]
-    -gencode arch=compute_61,code=sm_61
-    -gencode arch=compute_62,code=sm_62
+    -gencode arch=compute_53,code=[sm_53,compute_53]
+    -gencode arch=compute_62,code=[sm_62,compute_62]
   )
   add_definitions(-DGPU)
 else()
@@ -205,13 +203,13 @@ install(
   FILES_MATCHING PATTERN "*.h"
 )
 
-# Download yolov2-tiny.weights
+# Download yolov3-tiny.weights
 set(PATH "${CMAKE_CURRENT_SOURCE_DIR}/yolo_network_config/weights")
-set(FILE "${PATH}/yolov2-tiny.weights")
-message(STATUS "Checking and downloading yolov2-tiny.weights if needed ...")
+set(FILE "${PATH}/yolov3-tiny.weights")
+message(STATUS "Checking and downloading yolov3-tiny.weights if needed ...")
 if (NOT EXISTS "${FILE}")
   message(STATUS "... file does not exist. Downloading now ...")
-  execute_process(COMMAND wget http://pjreddie.com/media/files/yolov2-tiny.weights -P ${PATH})
+  execute_process(COMMAND wget http://pjreddie.com/media/files/yolov3-tiny.weights -P ${PATH})
 endif()
 
 # Download yolov3.weights
@@ -229,11 +227,11 @@ endif()
 if(CATKIN_ENABLE_TESTING)
   # Download yolov2.weights
   set(PATH "${CMAKE_CURRENT_SOURCE_DIR}/yolo_network_config/weights")
-  set(FILE "${PATH}/yolov2.weights")
-  message(STATUS "Checking and downloading yolov2.weights if needed ...")
+  set(FILE "${PATH}/yolov3.weights")
+  message(STATUS "Checking and downloading yolov3.weights if needed ...")
   if (NOT EXISTS "${FILE}")
     message(STATUS "... file does not exist. Downloading now ...")
-    execute_process(COMMAND wget http://pjreddie.com/media/files/yolov2.weights -P ${PATH})
+    execute_process(COMMAND wget http://pjreddie.com/media/files/yolov3.weights -P ${PATH})
   endif()
 
   find_package(rostest REQUIRED)

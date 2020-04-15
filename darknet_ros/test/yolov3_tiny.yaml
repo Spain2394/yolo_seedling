@@ -6,9 +6,9 @@ image_view:
 yolo_model:
 
   config_file:
-    name: yolov2.cfg
+    name: yolov3-tiny.cfg
   weight_file:
-    name: yolov2.weights
+    name: yolov3-tiny.weights
   threshold:
     value: 0.5
   detection_classes:

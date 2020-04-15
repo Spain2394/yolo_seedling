@@ -20,13 +20,10 @@
 #include <boost/thread.hpp>
 
 // OpenCV2.
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 #include <cv_bridge/cv_bridge.h>
+#include <opencv2/opencv.hpp>
 
-// Actions.
-#include <darknet_ros_msgs/CheckForObjectsAction.h>
+// Actions
 
 typedef actionlib::SimpleActionClient<darknet_ros_msgs::CheckForObjectsAction> CheckForObjectsActionClient;
 typedef std::shared_ptr<CheckForObjectsActionClient> CheckForObjectsActionClientPtr;
@@ -76,7 +73,7 @@ bool sendImageToYolo(ros::NodeHandle nh, const std::string& pathToTestImage) {
 
   // Get test image
   cv_bridge::CvImagePtr cv_ptr(new cv_bridge::CvImage);
-  cv_ptr->image = cv::imread(pathToTestImage, CV_LOAD_IMAGE_COLOR);
+  cv_ptr->image = cv::imread(pathToTestImage, 1);
   cv_ptr->encoding = sensor_msgs::image_encodings::RGB8;
   sensor_msgs::ImagePtr image = cv_ptr->toImageMsg();
 
