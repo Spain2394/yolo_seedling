@@ -2,6 +2,11 @@
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
 
 ## Overview
+[yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/doc/yolo_seedling.png)
+
+[yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/doc/ros_test.gif)
+
+
 
 **Author: [Marko Bjelonic](https://www.markobjelonic.com), marko.bjelonic@mavt.ethz.ch**
 
