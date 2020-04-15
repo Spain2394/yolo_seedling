@@ -119,7 +119,7 @@ modify the launch file so that it works for the CSI camera [jetson_csi_cam](http
   </node>
 </launch>
 ```
-you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for converting the image stream from the csi camera to a ros data message format.
+you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for converting the image stream from the csi camera to a ROS message.
 
 ![yolo_ros_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/ros_test.gif)
 
