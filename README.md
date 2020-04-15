@@ -61,7 +61,7 @@ This means that you need to check the compute capability (version) of your GPU. 
     -gencode arch=compute_62,code=[sm_62,compute_62]
 
 ### Download weights
-Get ```yolo_seedling``` by downloading the yolo_weights from here  https://doi.org/10.6084/m9.figshare.12132951.v1 and placing them in the ```catkin_ws/src/darknet_ros/darknet_ros/yolo_network_config/weights```
+Get YOLOv3-tiny weights that were pretrained on the COCO dataset and further trained on UGA 2015 and UGA 2018 seedling data by downloading the yolo_weights from here  https://doi.org/10.6084/m9.figshare.12132951.v1 and placing them in the ```catkin_ws/src/darknet_ros/darknet_ros/yolo_network_config/weights```
 
 
 You can also use some pre-trained weight from YOLO v3 can be found here:
