@@ -125,7 +125,7 @@ you will also need [gscam](https://github.com/ros-drivers/gscam.git) node for co
 
 ## Basic Usage
 
-In order to get YOLO ROS: Real-Time Object Detection for ROS to run with your robot, you will need to adapt a few parameters. It is the easiest if duplicate and adapt all the parameter files that you need to change from the `darkned_ros` package. These are specifically the parameter files in `config` and the launch file from the `launch` folder.
+In order to get YOLO ROS: Real-Time Object Detection for ROS to run with your robot, you will need to adapt a few parameters. It is the easiest if duplicate and adapt all the parameter files that you need to change from the `darknet_ros` package. These are specifically the parameter files in `config` and the launch file from the `launch` folder.
 
 ## Nodes
 
@@ -165,7 +165,7 @@ You can change the names and other parameters of the publishers, subscribers and
 
 ### Detection related parameters
 
-You can change the parameters that are related to the detection by adding a new config file that looks similar to `darkned_ros/config/yolo.yaml`.
+You can change the parameters that are related to the detection by adding a new config file that looks similar to `darknet_ros/config/yolo.yaml`.
 
 * **`image_view/enable_opencv`** (bool)
 
