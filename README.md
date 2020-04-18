@@ -1,4 +1,4 @@
-# YOLO ROS Seedling: Real-Time Object Detection for ROS on Jetson Tx2
+# YOLO ROS Seedling: Real-Time Object Detection for ROS on Jetson Tx2 :seedling:
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
 
 ## Overview
