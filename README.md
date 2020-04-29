@@ -200,4 +200,9 @@ Usage: ``` auto_predict.bash < target.txt ```.
 3. ``` rename.bash``` will rename and rescale each image in target folder.
 4. ``` auto_read.py ``` will reformat bounding boxes in target.txt and create a txt formatted bounding box for annotating images for YOLO training and place in them ```target_dir```. So each ```<name>.jpg``` will get a ```<name>txt``` Formatted as follows: ```x_center/image_width y_center/image_height bbox_width/image_width bbox_height/image_height```
     
+## Utilities for working gacrc clusters
+1. ```label_info_sub.sh``` auto generates labels and tests images in target folder, can be used for mass prediction for validation or test set.
+2. ```mAp_train_plant_sub.sh``` generates mAP, recall, precision, and F1 score for the validation set. Make sure to make to add validation path (```valid = valid.txt```) in your ```./cfg/obj.data``` 
+3. ```train_plant_sub-r0_complete.sh``` trains on complete dataset as of (04202020)
+
 
