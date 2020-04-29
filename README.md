@@ -206,3 +206,11 @@ Usage: ``` auto_predict.bash < target.txt ```.
 3. ```train_plant_sub-r0_complete.sh``` trains on complete dataset as of (04202020)
 
 
+## Training info for gacrc
+Link to training document: https://wiki.gacrc.uga.edu/images/5/5f/GACRC_Sapelo2_cluster_new_user_training_workshop_v7.pdf
+To work between your local device and the remote clusters use the following commmands
+```
+Login: [ssh] [scp] [-..] MyID@sapelo2.gacrc.uga.edu destination
+Transfer: [ssh] [scp] [-..] MyID@sapelo2.gacrc.uga.edu destination
+```
+
