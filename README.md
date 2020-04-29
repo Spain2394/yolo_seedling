@@ -192,7 +192,7 @@ You can change the parameters that are related to the detection by adding a new 
     Detection names of the network used by the cfg and weights file inside `darkned_ros/yolo_network_config/`.
 
 ## utility scripts
-## TODO ADD 
+These scripts are used to automate utilities for use with darknet
 These scripts are found in ```utils```
 1. ```auto_predict.bash``` will run prediction on every image ```target.txt```
 Usage: ``` auto_predict.bash < target.txt ```. 
