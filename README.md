@@ -1,4 +1,4 @@
-# YOLO ROS Seedling: Real-Time Object Detection for ROS on Jetson Tx2 :seedling:
+# ```YOLO_Seedling```
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
@@ -17,7 +17,7 @@ URL: https://github.com/leggedrobotics/darknet_ros, 2018.
 
 ## Nodes
 
-### Node: darknet_ros
+### Node: ```darknet_ros```
 
 This is the main YOLO ROS: Real-Time Object Detection for ROS node. It uses the camera measurements to detect pre-learned objects in the frames.
 
