@@ -3,7 +3,7 @@
 
 ## Overview
 ![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png)
-<img src="doc/yolo_seedling.pngps0-1-a-1.png" height="180" width="180">
+<img src="https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png" height="180" width="180">
 
 ## Citations
 M. Bjelonic
