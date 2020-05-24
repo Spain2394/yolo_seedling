@@ -1,11 +1,6 @@
 # YOLO ROS Seedling: Real-Time Object Detection for ROS on Jetson Tx2 :seedling:
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
-
-## Overview
-![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png)
-<img src="https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png" height="500" width="500" class=center>
-<img src="paris.jpg" alt="Paris" class="center">
-
+- Purpose: Real-time tracking using Yolov3/Yolov4
 
 ## Citations
 M. Bjelonic
