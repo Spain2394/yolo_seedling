@@ -3,7 +3,9 @@
 
 ## Overview
 ![yolo_seedling](https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png)
-<img src="https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png" height="180" width="180">
+<img src="https://github.com/UGA-BSAIL/darknet_ros/blob/master/darknet_ros/doc/yolo_seedling.png" height="500" width="500" class=center>
+<img src="paris.jpg" alt="Paris" class="center">
+
 
 ## Citations
 M. Bjelonic
