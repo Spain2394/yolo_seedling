@@ -87,3 +87,7 @@ You can change the parameters that are related to the detection by adding a new 
 
     Detection names of the network used by the cfg and weights file inside `darkned_ros/yolo_network_config/`.
 
+
+
+## Notes
+1. Ensure that you hvae compiled darknet seperately, you can do so by runnning ```make``` in ```~/catkin_ws/darknet_ros/darknet```

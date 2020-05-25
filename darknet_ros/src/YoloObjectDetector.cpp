@@ -433,7 +433,7 @@ void *YoloObjectDetector::fetchInThread()
     // output: is the image at pointer buff_ + buffIndex_ will be updated ?
     
     // mat_to_image(ROS_img, buff_ + buffIndex_);
-    *(buff_ + buffIndex_) = mat_to_image_cv(ROS_img);
+    *(buff_ + buffIndex_) = mat_to_image_cv(*ROS_img);
     
     headerBuff_[buffIndex_] = imageAndHeader.header;
     buffId_[buffIndex_] = actionId_;
@@ -445,7 +445,10 @@ void *YoloObjectDetector::fetchInThread()
 
 void *YoloObjectDetector::displayInThread(void *ptr)
 {
-  int c = show_image(buff_[(buffIndex_ + 1)%3], "YOLO V3", waitKeyDelay_);
+  // int c = show_image(buff_[(buffIndex_ + 1)%3], "YOLO V3", waitKeyDelay_);
+  // int c = show_image(buff_[(buffIndex_ + 1)%3], "YOLO V3")
+  int c = show_image_time(buff_[(buffIndex_ + 1)%3], "YOLO V3", waitKeyDelay_);
+
   if (c != -1) c = c%256;
   if (c == 27) {
       demoDone_ = 1;
