@@ -433,7 +433,7 @@ void *YoloObjectDetector::fetchInThread()
     // output: is the image at pointer buff_ + buffIndex_ will be updated ?
     
     // mat_to_image(ROS_img, buff_ + buffIndex_);
-    *(buff_ + buffIndex_) = mat_to_image_cv(*ROS_img);
+    *(buff_ + buffIndex_) = mat_to_image_cv(ROS_img);
     
     headerBuff_[buffIndex_] = imageAndHeader.header;
     buffId_[buffIndex_] = actionId_;
@@ -533,8 +533,9 @@ void YoloObjectDetector::yolo()
   {
     boost::shared_lock<boost::shared_mutex> lock(mutexImageCallback_);
     MatWithHeader_ imageAndHeader = getIplImageWithHeader();
+    // makes a copy of the original and returns an image that matches the Matrix data
     cv::Mat ROS_img = imageAndHeader.image;
-    buff_[0] = mat_to_image(ROS_img);
+    buff_[0] = mat_to_image_cv(ROS_img);
     headerBuff_[0] = imageAndHeader.header;
   }
   buff_[1] = copy_image(buff_[0]);
