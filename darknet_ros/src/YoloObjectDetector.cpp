@@ -433,7 +433,7 @@ void *YoloObjectDetector::fetchInThread()
     // output: is the image at pointer buff_ + buffIndex_ will be updated ?
     
     // mat_to_image(ROS_img, buff_ + buffIndex_);
-    *(buff_ + buffIndex__) = mat_to_image(ROS_img);
+    *(buff_ + buffIndex_) = mat_to_image_cv(ROS_img);
     
     headerBuff_[buffIndex_] = imageAndHeader.header;
     buffId_[buffIndex_] = actionId_;
