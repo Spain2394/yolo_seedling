@@ -14,7 +14,7 @@ URL: https://github.com/leggedrobotics/darknet_ros, 2018.
       year = {2016--2018},
     }
 
-## Build
+## Build 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
     catkin_make -DCMAKE_BUILD_TYPE=Release
@@ -22,9 +22,7 @@ To maximize performance, make sure to build in *Release* mode. You can specify t
 or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/latest/index.html#)
 
     catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
-
-
-
+    
 ## Nodes
 
 ### Node: ```darknet_ros```
