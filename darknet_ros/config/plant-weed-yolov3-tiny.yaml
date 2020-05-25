@@ -1,12 +1,12 @@
 yolo_model:
 
   config_file:
-    name: plant-weed-yolov3-tiny.cfg
-  weight_file:
-    name: plant-weed-yolov3-tiny_final.weights
+    name: plant-weed-yolov3-tiny-r0.cfg
+  weight_file:plant-weed-yolov3-tiny-r0_best.weights
+    name: 
   threshold:
-    value: 0.4
-  detection_classes:
+    value: 0.25
+  detection_sclasses:
     names:
       - weed
       - plant

@@ -123,7 +123,9 @@ void YoloObjectDetector::init()
 
   // Load network.
   setupNetwork(cfg, weights, data, thresh, detectionNames, numClasses_,
-                0, 0, 1, 0.5, 0, 0, 0, 0);
+                0, 0, 1, 0.5, 0, 0, 0, 0, 1, 1);
+                // default letterbox and external output are set to true
+
   yoloThread_ = std::thread(&YoloObjectDetector::yolo, this);
 
   // Initialize publisher and subscriber.
@@ -305,8 +307,11 @@ void YoloObjectDetector::rememberNetwork(network *net)
   }
 }
 
+
+// Computes the average predictions 
 detection *YoloObjectDetector::avgPredictions(network *net, int *nboxes)
 {
+  
   int i, j;
   int count = 0;
   fill_cpu(demoTotal_, 0, avg_, 1);
@@ -320,7 +325,11 @@ detection *YoloObjectDetector::avgPredictions(network *net, int *nboxes)
       count += l.outputs;
     }
   }
-  detection *dets = get_network_boxes(net, buff_[0].w, buff_[0].h, demoThresh_, demoHier_, 0, 1, nboxes);
+  
+
+  // 
+  detection *dets = get_network_boxes(net, buff_[0].w, buff_[0].h, demoThresh_, demoHier_, 0, 1, nboxes,0);
+  // dets is in form: tx,ty,tw,th,uncertainty
   return dets;
 }
 
@@ -331,7 +340,8 @@ void *YoloObjectDetector::detectInThread()
 
   layer l = net_->layers[net_->n - 1];
   float *X = buffLetter_[(buffIndex_ + 2) % 3].data;
-  float *prediction = network_predict(net_, X);
+  // changed from network_prediction(net_,X)
+  float *prediction = network_predict_ptr(net_, X);
 
   rememberNetwork(net_);
   detection *dets = 0;
@@ -347,7 +357,16 @@ void *YoloObjectDetector::detectInThread()
     printf("Objects:\n\n");
   }
   image display = buff_[(buffIndex_+2) % 3];
-  draw_detections(display, dets, nboxes, demoThresh_, demoNames_, demoAlphabet_, demoClasses_);
+
+  draw_detections_v3(display, dets, nboxes, demoThresh_, demoNames_, demoAlphabet_, demoClasses_, extOutput_);
+  // 
+  // draw_detections(display, dets, nboxes, demoThresh_, demoNames_, demoAlphabet_, demoClasses_);
+  // draw_detections(image, int, float, box*, float**, char**, image**, int)
+
+  // NEW: void void draw_detections(image im, int num, float thresh, box *boxes, float **probs, char **names, image **alphabet, int classes)
+  // OLD: void draw_detections(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes)
+  
+  
 
   // extract the bounding boxes and send them to ROS
   int i, j;
@@ -410,7 +429,12 @@ void *YoloObjectDetector::fetchInThread()
     boost::shared_lock<boost::shared_mutex> lock(mutexImageCallback_);
     MatWithHeader_ imageAndHeader = getIplImageWithHeader();
     cv::Mat ROS_img = imageAndHeader.image;
-    mat_to_image(ROS_img, buff_ + buffIndex_);
+    // input: Mat image and the current image in the buffer
+    // output: is the image at pointer buff_ + buffIndex_ will be updated ?
+    
+    // mat_to_image(ROS_img, buff_ + buffIndex_);
+    *(buff_ + buffIndex__) = mat_to_image(ROS_img);
+    
     headerBuff_[buffIndex_] = imageAndHeader.header;
     buffId_[buffIndex_] = actionId_;
   }
@@ -457,7 +481,7 @@ void *YoloObjectDetector::detectLoop(void *ptr)
 void YoloObjectDetector::setupNetwork(char *cfgfile, char *weightfile, char *datafile, float thresh,
                                       char **names, int classes,
                                       int delay, char *prefix, int avg_frames, float hier, int w, int h,
-                                      int frames, int fullscreen)
+                                      int frames, int fullscreen, int letterbox, int ext_output)
 {
   demoPrefix_ = prefix;
   demoDelay_ = delay;
@@ -467,6 +491,8 @@ void YoloObjectDetector::setupNetwork(char *cfgfile, char *weightfile, char *dat
   demoAlphabet_ = alphabet;
   demoClasses_ = classes;
   demoThresh_ = thresh;
+  letterBox_  = letterbox;
+  extOutput_ = ext_output;
   demoHier_ = hier;
   fullScreen_ = fullscreen;
   printf("YOLO V3\n");
