@@ -433,7 +433,7 @@ void *YoloObjectDetector::fetchInThread()
     // Test current method
     // image* image_ptr = &(buff_ + buffIndex_)
     // object are defaulted to pointers if denoted 
-    mat_to_image_basketball_cv(*ROS_img, buff_ + buffIndex_);
+    mat_to_image_basketball_cv(&ROS_img, buff_ + buffIndex_);
     
     
     headerBuff_[buffIndex_] = imageAndHeader.header;
@@ -537,7 +537,7 @@ void YoloObjectDetector::yolo()
     // makes a copy of the original and returns an image that matches the Matrix data
     cv::Mat ROS_img = imageAndHeader.image;
     // ptr image, output new image
-    buff_[0] = mat_to_image_cv(ROS_img);
+    buff_[0] = mat_to_image_football_cv(&ROS_img);
     headerBuff_[0] = imageAndHeader.header;
   }
   buff_[1] = copy_image(buff_[0]);
