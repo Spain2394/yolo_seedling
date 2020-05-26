@@ -2,18 +2,6 @@
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
-## Citations
-M. Bjelonic
-**"YOLO ROS: Real-Time Object Detection for ROS"**,
-URL: https://github.com/leggedrobotics/darknet_ros, 2018.
-
-    @misc{bjelonicYolo2018,
-      author = {Marko Bjelonic},
-      title = {{YOLO ROS}: Real-Time Object Detection for {ROS}},
-      howpublished = {\url{https://github.com/leggedrobotics/darknet_ros}},
-      year = {2016--2018},
-    }
-
 ## Build 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
@@ -94,3 +82,15 @@ You can change the parameters that are related to the detection by adding a new 
 
 ## Notes
 1. Ensure that you hvae compiled darknet seperately, you can do so by runnning ```make``` in ```~/catkin_ws/darknet_ros/darknet```
+
+## Citations
+M. Bjelonic
+**"YOLO ROS: Real-Time Object Detection for ROS"**,
+URL: https://github.com/leggedrobotics/darknet_ros, 2018.
+
+    @misc{bjelonicYolo2018,
+      author = {Marko Bjelonic},
+      title = {{YOLO ROS}: Real-Time Object Detection for {ROS}},
+      howpublished = {\url{https://github.com/leggedrobotics/darknet_ros}},
+      year = {2016--2018},
+    }
