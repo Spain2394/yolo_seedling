@@ -2,8 +2,8 @@ yolo_model:
 
   config_file:
     name: plant-weed-yolov3-tiny-r0.cfg
-  weight_file:plant-weed-yolov3-tiny-r0_best.weights
-    name: 
+  weight_file:
+    name: plant-weed-yolov3-tiny-r0_best.weights
   threshold:
     value: 0.25
   detection_sclasses:

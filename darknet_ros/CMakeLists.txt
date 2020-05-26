@@ -90,6 +90,7 @@ set(PROJECT_LIB_FILES
 )
 
 set(DARKNET_CORE_FILES
+    ${DARKNET_PATH}/src/yolo_v2_class.cpp       ${DARKNET_PATH}/src/http_stream.cpp  
     ${DARKNET_PATH}/src/activation_layer.c      ${DARKNET_PATH}/src/activations.c 
     ${DARKNET_PATH}/src/avgpool_layer.c         ${DARKNET_PATH}/src/batchnorm_layer.c
     ${DARKNET_PATH}/src/blas.c                  ${DARKNET_PATH}/src/box.c
@@ -111,16 +112,15 @@ set(DARKNET_CORE_FILES
     ${DARKNET_PATH}/src/shortcut_layer.c        ${DARKNET_PATH}/src/softmax_layer.c
     ${DARKNET_PATH}/src/tree.c                  ${DARKNET_PATH}/src/upsample_layer.c
     ${DARKNET_PATH}/src/utils.c                 ${DARKNET_PATH}/src/yolo_layer.c
-    ${DARKNET_PATH}/src/compare.c		${DARKNET_PATH}/src/conv_lstm_layer.c
-    ${DARKNET_PATH}/src/cpu_gemm.c		${DARKNET_PATH}/src/dice.c
+    ${DARKNET_PATH}/src/compare.c		            ${DARKNET_PATH}/src/conv_lstm_layer.c
+    ${DARKNET_PATH}/src/cpu_gemm.c		          ${DARKNET_PATH}/src/dice.c
     ${DARKNET_PATH}/src/gaussian_yolo_layer.c   ${DARKNET_PATH}/src/gemm.c
-    ${DARKNET_PATH}/src/getopt.c		${DARKNET_PATH}/src/gettimeofday.c
-    ${DARKNET_PATH}/src/gru_layer.c		${DARKNET_PATH}/src/reorg_old_layer.c
-    ${DARKNET_PATH}/src/rnn_vid.c		${DARKNET_PATH}/src/sam_layer.c
+    ${DARKNET_PATH}/src/getopt.c		            ${DARKNET_PATH}/src/gettimeofday.c
+    ${DARKNET_PATH}/src/gru_layer.c		          ${DARKNET_PATH}/src/reorg_old_layer.c
+    ${DARKNET_PATH}/src/rnn_vid.c		            ${DARKNET_PATH}/src/sam_layer.c
     ${DARKNET_PATH}/src/scale_channels_layer.c	${DARKNET_PATH}/src/swag.c
-    ${DARKNET_PATH}/src/voxel.c			${DARKNET_PATH}/src/writing.c
-   
-
+    ${DARKNET_PATH}/src/voxel.c			            ${DARKNET_PATH}/src/writing.c
+ 
     ${DARKNET_PATH}/src/art.c              	
     ${DARKNET_PATH}/src/captcha.c          	${DARKNET_PATH}/src/cifar.c
     ${DARKNET_PATH}/src/classifier.c       	${DARKNET_PATH}/src/coco.c
@@ -149,6 +149,7 @@ if (CUDA_FOUND)
   cuda_add_library(${PROJECT_NAME}_lib
     ${PROJECT_LIB_FILES} ${DARKNET_CORE_FILES}
     ${DARKNET_CUDA_FILES}
+    ${DARKNET_PATH}/src/demo.c
   )
 
   target_link_libraries(${PROJECT_NAME}_lib
