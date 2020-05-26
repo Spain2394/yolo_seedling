@@ -23,6 +23,9 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 
     catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
     
+## Run 
+```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
+
 ## Nodes
 
 ### Node: ```darknet_ros```
