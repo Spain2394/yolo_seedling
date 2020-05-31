@@ -14,6 +14,8 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 ## Run 
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
+## Setting up
+download network configuration file ```.cfg``` and weights ```.weights``` here: (https://pjreddie.com/darknet/yolo/)[https://pjreddie.com/darknet/yolo/]
 ## Nodes
 
 ### Node: ```darknet_ros```
