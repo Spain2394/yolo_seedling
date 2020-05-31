@@ -21,7 +21,9 @@ download network configuration file ```.cfg``` and weights ```.weights``` here: 
 
 ## Camera
 you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_stream_opencv?action=fullsearch&context=180&value=linkto%3A%22video_stream_opencv%22) or another usb camera broadcaster to generate camera feed for darknet ros.
-To run use ```roslaunch video_stream_opencv camera.launch``` 
+To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
+Tp run with video feed run: ``` roslaunch video_stream_opencv video.launch camer_name:=<video_file.mp4>```
+
 
 
 
