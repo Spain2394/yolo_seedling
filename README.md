@@ -24,6 +24,8 @@ you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_st
 To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 Tp run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
+Note: you can view the camera topic by running: ```rqt_view_image```
+
 
 ## Nodes
 
