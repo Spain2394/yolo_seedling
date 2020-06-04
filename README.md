@@ -112,5 +112,7 @@ URL: https://github.com/leggedrobotics/darknet_ros, 2018.
     
 ## Credit
 [tiagoshibata](https://github.com/tiagoshibata/darknet.git), [pjreddie](https://github.com/pjreddie/darknet) darknet
+
 [leggedrobotics](https://github.com/leggedrobotics/darknet_ros) darknet_ros
+
 [abewley](https://github.com/abewley/sort) sort
