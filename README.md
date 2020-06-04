@@ -14,8 +14,19 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 ## Run 
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
-## Setting up
+# Setting up
+
+## Network
 download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+
+## Camera
+you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_stream_opencv?action=fullsearch&context=180&value=linkto%3A%22video_stream_opencv%22) or another usb camera broadcaster to generate camera feed for darknet ros.
+To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
+Tp run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
+
+Note: you can view the camera topic by running: ```rqt_view_image```
+
+
 ## Nodes
 
 ### Node: ```darknet_ros```
@@ -96,3 +107,10 @@ URL: https://github.com/leggedrobotics/darknet_ros, 2018.
       howpublished = {\url{https://github.com/leggedrobotics/darknet_ros}},
       year = {2016--2018},
     }
+         
+## Credit
+[tiagoshibata](https://github.com/tiagoshibata/darknet.git), [pjreddie](https://github.com/pjreddie/darknet) darknet
+
+[leggedrobotics](https://github.com/leggedrobotics/darknet_ros) darknet_ros
+
+[abewley](https://github.com/abewley/sort) sort
