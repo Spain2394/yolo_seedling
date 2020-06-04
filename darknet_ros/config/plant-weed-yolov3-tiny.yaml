@@ -5,8 +5,13 @@ yolo_model:
   weight_file:
     name: plant-weed-yolov3-tiny-r0_best.weights
   threshold:
+<<<<<<< Updated upstream
     value: 0.25
   detection_sclasses:
+=======
+    value: 0.2
+  detection_classes:
+>>>>>>> Stashed changes
     names:
       - weed
       - plant
