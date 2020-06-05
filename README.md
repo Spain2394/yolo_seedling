@@ -96,18 +96,6 @@ You can change the parameters that are related to the detection by adding a new 
 ## Notes
 1. Ensure that you hvae compiled darknet seperately, you can do so by runnning ```make``` in ```~/catkin_ws/darknet_ros/darknet```
 
-## Citations
-M. Bjelonic
-**"YOLO ROS: Real-Time Object Detection for ROS"**,
-URL: https://github.com/leggedrobotics/darknet_ros, 2018.
-
-    @misc{bjelonicYolo2018,
-      author = {Marko Bjelonic},
-      title = {{YOLO ROS}: Real-Time Object Detection for {ROS}},
-      howpublished = {\url{https://github.com/leggedrobotics/darknet_ros}},
-      year = {2016--2018},
-    }
-         
 ## Credit
 [tiagoshibata](https://github.com/tiagoshibata/darknet.git), [pjreddie](https://github.com/pjreddie/darknet) darknet
 
