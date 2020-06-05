@@ -3,7 +3,7 @@
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
 ## Build 
-1. Ensure that you hvae compiled darknet seperately, you can do so by runnning ```make``` in ```darknet```
+1. Ensure that you have compiled darknet seperately, you can do so by runnning ```make``` in ```darknet```
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
@@ -17,16 +17,21 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 # Setting up
 
 ## Network
-download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/) or use your own trained network config and weights.
 
 # Run 
-
+### ```yolo_seedling```
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
-## Camera
+### Camera
 you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_stream_opencv?action=fullsearch&context=180&value=linkto%3A%22video_stream_opencv%22) or another usb camera broadcaster to generate camera feed for darknet ros.
 To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 Tp run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
+
+## Configure
+In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed
+and ```camera/image_raw``` for camera feed.
+
 
 Note: you can view the camera topic by running: ```rqt_view_image```
 
