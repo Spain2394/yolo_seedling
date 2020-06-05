@@ -4,7 +4,7 @@
   
   <!-- Use YOLOv3 -->
   <arg name="network_param_file"         default="$(find darknet_ros)/config/plant-weed-yolov3-tiny.yaml"/>
-  <arg name="image" default="/csi_cam_0/image_raw" />
+  <arg name="image" default="/videofile/camera_info" />
 
   <!-- Include main launch file -->
   <include file="$(find darknet_ros)/launch/darknet_ros.launch">
