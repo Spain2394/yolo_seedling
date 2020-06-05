@@ -13,13 +13,15 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 
     catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
     
-## Run 
-```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
 # Setting up
 
 ## Network
 download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+
+# Run 
+
+```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
 ## Camera
 you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_stream_opencv?action=fullsearch&context=180&value=linkto%3A%22video_stream_opencv%22) or another usb camera broadcaster to generate camera feed for darknet ros.
