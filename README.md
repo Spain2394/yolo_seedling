@@ -3,7 +3,7 @@
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
 ## Build 
-1. Ensure that you hvae compiled darknet seperately, you can do so by runnning ```make``` in ```darknet```
+1. Ensure that you have compiled darknet seperately, you can do so by runnning ```make``` in ```darknet```
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
