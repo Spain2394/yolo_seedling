@@ -28,6 +28,11 @@ you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_st
 To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 Tp run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
+## Configure
+In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed
+and ```camera/image_raw``` for camera feed.
+
+
 Note: you can view the camera topic by running: ```rqt_view_image```
 
 
