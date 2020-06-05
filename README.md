@@ -1,5 +1,5 @@
 # ```YOLO_Seedling```
-- Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4
+- Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4 with ROS melodic
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
 
