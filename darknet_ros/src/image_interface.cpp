@@ -4,6 +4,7 @@
  *  Created on: Dec 19, 2016
  *      Author: Marko Bjelonic
  *   Institute: ETH Zurich, Robotic Systems Lab
+ *   Modified by Allen Spain
  */
 
 #include "darknet_ros/image_interface.h"
