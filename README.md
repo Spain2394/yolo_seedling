@@ -17,7 +17,7 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 # Setting up
 
 ## Network
-download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/) or use your own trained network config and weights.
 
 # Run 
 ### ```yolo_seedling```
