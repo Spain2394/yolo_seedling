@@ -105,6 +105,6 @@ You can change the parameters that are related to the detection by adding a new 
 
 [pjreddie](https://github.com/pjreddie/darknet), [AlexeyAB](https://github.com/AlexeyAB/darknet) darknet
 
-[leggedrobotics](https://github.com/leggedrobotics/darknet_ros) darknet_ros
+[leggedrobotics (Marko Bjelonic)](https://github.com/leggedrobotics/darknet_ros) darknet_ros
 
 [abewley](https://github.com/abewley/sort) sort
