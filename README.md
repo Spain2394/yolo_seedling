@@ -21,7 +21,7 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/) or use your own trained network config and weights.
 
 ## Configure
-Configuration usinng [video_stream_opencv](https://wiki.ros.org/video_stream_opencv)
+Configuration using [video_stream_opencv](https://wiki.ros.org/video_stream_opencv) or any camera reading that publishes ```[sensor_msgs/Image]```
 In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed and ```camera/image_raw``` for camera feed.
 
 
