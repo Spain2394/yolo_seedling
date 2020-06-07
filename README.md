@@ -30,9 +30,8 @@ In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
 ### Camera
-you can use [video_stream_opencv](http://wiki.ros.org/action/fullsearch/video_stream_opencv?action=fullsearch&context=180&value=linkto%3A%22video_stream_opencv%22) or another usb camera broadcaster to generate camera feed for darknet ros.
-To run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
-Tp run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
+run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
+run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
 Note: you can view the camera topic by running: ```rqt_view_image```
 
