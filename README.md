@@ -7,7 +7,7 @@ clone this ```darknet_ros``` into your ```~/catkin_ws/src```
 clone https://github.com/Spain2394/darknet_bckup into ```~/catkin_ws/src/darknet_ros```
 
 ## Build 
-1. Ensure that you have compiled ```darknet_bckup``` seperately, you can do so by runnning ```cd ~catkin_ws/src/darknet_ros/darknet_bckup``` and using ```make```
+1. Ensure that you have compiled ```darknet_bckup``` seperately, you can do so by runnning ```cd ~/catkin_ws/src/darknet_ros/darknet_bckup``` and using ```make```
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
 
