@@ -33,7 +33,7 @@ In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``
 run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
-Note: you can view the camera topic by running: ```rqt_view_image```
+Note: you can view the camera topic by running: ```rqt_image_view```
 
 
 ## Nodes
