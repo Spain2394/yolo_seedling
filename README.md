@@ -103,7 +103,7 @@ You can change the parameters that are related to the detection by adding a new 
 
 ## Credit
 
-[tiagoshibata](https://github.com/tiagoshibata/darknet.git), [pjreddie](https://github.com/pjreddie/darknet) darknet
+[pjreddie](https://github.com/pjreddie/darknet), [AlexeyAB](https://github.com/AlexeyAB/darknet) darknet
 
 [leggedrobotics](https://github.com/leggedrobotics/darknet_ros) darknet_ros
 
