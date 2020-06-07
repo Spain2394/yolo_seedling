@@ -2,8 +2,6 @@
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4 with ROS melodic
 - Purpose: Real-time tracking using Yolov3/Yolov4
 
-
-
 # Setting up
 clone this ```darknet_ros``` into your ```~/catkin_ws/src```
 clone https://github.com/Spain2394/darknet_bckup into ```~/catkin_ws/src/darknet_ros```
@@ -23,8 +21,8 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/) or use your own trained network config and weights.
 
 ## Configure
-In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed
-and ```camera/image_raw``` for camera feed.
+Configuration usinng [video_stream_opencv](https://wiki.ros.org/video_stream_opencv)
+In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed and ```camera/image_raw``` for camera feed.
 
 
 # Run 
