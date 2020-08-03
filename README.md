@@ -1,6 +1,9 @@
 # ```YOLO_Seedling``` :seedling:
 - Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4 with ROS melodic
-- Purpose: Real-time tracking using Yolov3/Yolov4
+@TODO
+- Package tested on - NVIDIA GTX1060 
+- Package tested on - NVIDIA Jetson Nano
+- Purpose of this project: Real-time plant tracking using Yolov3/Yolov4
 
 ## Setup
 clone this ```darknet_ros``` into your ```~/catkin_ws/src```
