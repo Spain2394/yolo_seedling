@@ -32,7 +32,6 @@ Configuration using [video_stream_opencv](https://wiki.ros.org/video_stream_open
 In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed and ```camera/image_raw``` for camera feed.
 
 ## Run 
-### ```yolo_seedling```
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
 ## Nodes
