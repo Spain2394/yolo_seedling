@@ -3,7 +3,7 @@
 @TODO
 - Package tested on - NVIDIA GTX1060 
 - Package tested on - NVIDIA Jetson Nano
-- Purpose of this project: Real-time plant tracking using Yolov3/Yolov4
+- Purpose of this project: Real-time plant tracking using Yolov3/Yolov4 on edge devices
 
 ## Setup
 clone this ```darknet_ros``` into your ```~/catkin_ws/src```
