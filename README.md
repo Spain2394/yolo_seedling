@@ -36,11 +36,10 @@ download network configuration file ```.cfg``` and weights ```.weights``` here: 
 ### Computer: Jetson Nano
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny||---|[weights](weights)|[cfg](cfg)|
-|Yolov3-a||---|[weights](weights)|[cfg](cfg)|
-|Yolov3-b||---|----|----||
-|Yolov4-a||---|----|----||
-|Yolov4-b||---|----|----||
+|Yolov3-tiny||---|| |[weights](weights)|[cfg](cfg)|
+|Yolov3-a||---|||[weights](weights)|[cfg](cfg)|
+|Yolov4-a||---|----|----|||
+|Yolov4-b||---|----|----|||
 
 
 ### System 76 w/ GTX1060
