@@ -25,23 +25,25 @@ download original models (trained for MS COCO dataset):
 
 <details><summary><b>HERE</b> - Yolo v4-tiny files</summary>
     
-    * [yolov4-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg) - **40.2% mAP@0.5 - 371(1080Ti) FPS / 330(RTX2070) FPS** - 6.9            BFlops - 23.1 MB: [yolov4-tiny.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)
+[yolov4-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg) - **40.2% mAP@0.5 - 371(1080Ti) FPS / 330(RTX2070) FPS** - 6.9            BFlops - 23.1 MB: [yolov4-tiny.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)
     
 </details>
 
 <details><summary><b>HERE</b> - Yolo v3-tiny files</summary>
     
-    * [yolov3-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov3-tiny.cfg) - **33.1% mAP@0.5 - 345(R) FPS** - 5.6 BFlops - 33.7 MB: [yolov3-tiny.weights](https://pjreddie.com/media/files/yolov3-tiny.weights)
+[yolov3-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov3-tiny.cfg) - **33.1% mAP@0.5 - 345(R) FPS** - 5.6 BFlops - 33.7 MB: [yolov3-tiny.weights](https://pjreddie.com/media/files/yolov3-tiny.weights)
 
 </details>
 
+#### My seedling models
+Download the models and config (trained on UGA 2015 and UGA 2018) and tuned based on the combined validation set of UGA 2015 and UGA 2018.
+(on Tesla v100)
 
-My seedling models
-|model| maP| BFLOPS|FPS|weights|config|
-|:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-small||---||[weights](weights)|[cfg](cfg)|
+|model| maP| BFLOPS|weights|config|(widthxheight)|
+|:---:|:----:|:---:|:----:|:----:|:-----:|
+|Yolov3-tiny-big|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088)| 
+|Yolov3-tiny-med|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| ()  |
+|Yolov3-tiny-small|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](cfg)| |
 
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
@@ -49,7 +51,8 @@ My seedling models
 |Yolov4-tiny-med||---||[weights](weights)|[cfg](cfg)|
 |Yolov4-tiny-small||---||[weights](weights)|[cfg](cfg)|
 
-### Computer: Jetson Nano
+### Hardware Benchmarks
+#### Computer: Jetson Nano
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
 |Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
@@ -57,15 +60,23 @@ My seedling models
 |Yolov3-tiny-small||---||----|----||
 
 
-### System 76 w/ GTX1060
+#### Computer: Jetson TX2
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
 |Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
 |Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
 |Yolov3-tiny-small||---||----|----||
 
-## Configure
-### Camera
+#### Computer: SW10 w/ GTX
+|model| maP| BFLOPS|FPS|weights|config|
+|:---:|:----:|:---:|:----:|:----:|:----:|
+|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-small||---||----|----||
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## ROS Setup
+#### Camera
 run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
@@ -74,16 +85,16 @@ Note: you can view the camera topic by running: ```rqt_image_view```
 Configuration using [video_stream_opencv](https://wiki.ros.org/video_stream_opencv) or any camera reading that publishes ```[sensor_msgs/Image]```
 In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed and ```camera/image_raw``` for camera feed.
 
-## Run 
+#### Run 
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
-## Nodes
+### Nodes
 
-### Node: ```darknet_ros```
+#### Node: ```darknet_ros```
 
 This is the main YOLO ROS: Real-Time Object Detection for ROS node. It uses the camera measurements to detect pre-learned objects in the frames.
 
-### ROS related parameters
+#### ROS related parameters
 
 You can change the names and other parameters of the publishers, subscribers and actions inside `darkned_ros/config/ros.yaml`.
 
@@ -113,7 +124,7 @@ You can change the names and other parameters of the publishers, subscribers and
 
     Sends an action with an image and the result is an array of bounding boxes.
 
-### Detection related parameters
+#### Detection related parameters
 
 You can change the parameters that are related to the detection by adding a new config file that looks similar to `darknet_ros/config/yolo.yaml`.
 
@@ -142,7 +153,7 @@ You can change the parameters that are related to the detection by adding a new 
     Detection names of the network used by the cfg and weights file inside `darkned_ros/yolo_network_config/`.
 
 
-## Credit
+#### Credit
 
 [pjreddie](https://github.com/pjreddie/darknet), [AlexeyAB](https://github.com/AlexeyAB/darknet) darknet
 
