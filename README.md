@@ -78,12 +78,25 @@ The following tests were performed during inference on the video 20 random video
 |Yolov3-tiny-med|FR|Power|RAM|
 |Yolov3-tiny-small|FR|Power|RAM| 
 
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov4-tiny-big|FR|Power|RAM|
+|Yolov4-tiny-med|FR|Power|RAM|
+|Yolov4-tiny-small|FR|Power|RAM| 
+
 #### Computer: SW10 w/ GTX
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|FR|Power|RAM|
 |Yolov3-tiny-med|FR|Power|RAM|
 |Yolov3-tiny-small|FR|Power|RAM| 
+
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov4-tiny-big|FR|Power|RAM|
+|Yolov4-tiny-med|FR|Power|RAM|
+|Yolov4-tiny-small|FR|Power|RAM| 
+
 
 
 I. MODEL---> Device (Maybe just offload?) 1. Nano--> [](Model) 2. Tx2 --> [](Model) 3. SW10 --> []()
