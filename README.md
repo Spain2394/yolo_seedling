@@ -28,28 +28,25 @@ download network configuration file ```.cfg``` and weights ```.weights``` here: 
 ### Computer: Jetson Tx2
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-mod||---||[weights](weights)|[cfg](cfg)|
-|Yolov4-mod||---||----|----||
+|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-small||---|[weights](weights)|[cfg](cfg)|
 
 
 ### Computer: Jetson Nano
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny||---|| |[weights](weights)|[cfg](cfg)|
-|Yolov3-a||---|||[weights](weights)|[cfg](cfg)|
-|Yolov4-a||---|----|----|||
-|Yolov4-b||---|----|----|||
+|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-small||---||----|----||
 
 
 ### System 76 w/ GTX1060
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny||---|[weights](weights)|[cfg](cfg)|
-|Yolov3-a||---|[weights](weights)|[cfg](cfg)|
-|Yolov3-b||---|----|----||
-|Yolov4-a||---|----|----||
-|Yolov4-b||---|----|----||
+|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-small||---||----|----||
 
 ## Configure
 ### Camera
