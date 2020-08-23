@@ -21,13 +21,22 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
     catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
 
 ## Models
-download original weights 
+download original models (trained for MS COCO dataset):
 
-<details><summary><b>HERE</b> - Yolo v4 models</summary>
+<details><summary><b>HERE</b> - Yolo v4-tiny files</summary>
+    
     * [yolov4-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg) - **40.2% mAP@0.5 - 371(1080Ti) FPS / 330(RTX2070) FPS** - 6.9            BFlops - 23.1 MB: [yolov4-tiny.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)
+    
+</details>
+
+<details><summary><b>HERE</b> - Yolo v3-tiny files</summary>
+    
+    * [yolov3-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov3-tiny.cfg) - **33.1% mAP@0.5 - 345(R) FPS** - 5.6 BFlops - 33.7 MB: [yolov3-tiny.weights](https://pjreddie.com/media/files/yolov3-tiny.weights)
+
 </details>
 
 
+My seedling models
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
 |Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
