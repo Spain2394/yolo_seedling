@@ -55,27 +55,47 @@ A: @ TODO
 |Yolov4-tiny-small|36.36%| 7.231|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|(480x384)|
 
 ### Hardware Benchmarks
+__Which is the best model for each device ?__
+@TODO
+The following tests were performed during inference on the video 20 random videos from the dataset [here]()
 #### Computer: Jetson Nano
-|model| maP| BFLOPS|FPS|weights|config|
-|:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-small||---||----|----||
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov3-tiny-big|FR|Power|RAM|
+|Yolov3-tiny-med|FR|Power|RAM|
+|Yolov3-tiny-small|FR|Power|RAM| 
 
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov4-tiny-big|FR|Power|RAM|
+|Yolov4-tiny-med|FR|Power|RAM|
+|Yolov4-tiny-small|FR|Power|RAM| 
 
 #### Computer: Jetson TX2
-|model| maP| BFLOPS|FPS|weights|config|
-|:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-small||---||----|----||
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov3-tiny-big|FR|Power|RAM|
+|Yolov3-tiny-med|FR|Power|RAM|
+|Yolov3-tiny-small|FR|Power|RAM| 
 
 #### Computer: SW10 w/ GTX
-|model| maP| BFLOPS|FPS|weights|config|
-|:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-small||---||----|----||
+|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|:---:|:----:|:---:|:----:|
+|Yolov3-tiny-big|FR|Power|RAM|
+|Yolov3-tiny-med|FR|Power|RAM|
+|Yolov3-tiny-small|FR|Power|RAM| 
+
+
+I. MODEL---> Device (Maybe just offload?) 1. Nano--> [](Model) 2. Tx2 --> [](Model) 3. SW10 --> []()
+Pick your model suffer the consequences, know that you may have to offload the video ? 
+
+Q: Would it be possible to develop a small model that has low RAM usage (yolov3-tiny-small/yolov4-tiny-small)by pruning the larger model creating a more effective higher power model.
+
+Q: Why use ROS? It makes offloading (sharing data) over a network quite easy.
+
+II. Real-time tracking using SORT and DEEP SORT --> [Link]()
+
+III. Conclusion
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ROS Setup
