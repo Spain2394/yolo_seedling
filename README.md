@@ -44,15 +44,15 @@ A: @ TODO
 
 |model| maP| BFLOPS|weights|config|(widthxheight)|
 |:---:|:----:|:---:|:----:|:----:|:-----:|
-|Yolov3-tiny-big|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088)| 
-|Yolov3-tiny-med|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| ()  |
-|Yolov3-tiny-small|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](cfg)| |
+|Yolov3-tiny-big|86.50%|12.388|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088)| 
+|Yolov3-tiny-med|51.54%|3.097|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| (704x544)  |
+|Yolov3-tiny-small|24.23%|1.490|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](cfg)|(480x384)|
 
 |model| maP| BFLOPS|weights|config|(widthxheight)|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov4-tiny-big|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)| |
-|Yolov4-tiny-med|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)|
-|Yolov4-tiny-small|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|
+|Yolov4-tiny-big|88.15%|60.095||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088) |
+|Yolov4-tiny-med|68.24%|15.024||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| (704x544) |
+|Yolov4-tiny-small|36.36%| 7.231||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|480x384)|
 
 ### Hardware Benchmarks
 #### Computer: Jetson Nano
