@@ -39,17 +39,20 @@ download original models (trained for MS COCO dataset):
 Download the models and config (trained on UGA 2015 and UGA 2018) and tuned based on the combined validation set of UGA 2015 and UGA 2018.
 (on Tesla v100)
 
+Q: Are these system independent? 
+A: @ TODO
+
 |model| maP| BFLOPS|weights|config|(widthxheight)|
 |:---:|:----:|:---:|:----:|:----:|:-----:|
 |Yolov3-tiny-big|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088)| 
 |Yolov3-tiny-med|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| ()  |
 |Yolov3-tiny-small|mAP|BFLOPS|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](cfg)| |
 
-|model| maP| BFLOPS|FPS|weights|config|
+|model| maP| BFLOPS|weights|config|(widthxheight)|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov4-tiny-big||---||[weights](weights)|[cfg](cfg)|
-|Yolov4-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov4-tiny-small||---||[weights](weights)|[cfg](cfg)|
+|Yolov4-tiny-big|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)| |
+|Yolov4-tiny-med|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)|
+|Yolov4-tiny-small|map|BFLOPS||[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|
 
 ### Hardware Benchmarks
 #### Computer: Jetson Nano
