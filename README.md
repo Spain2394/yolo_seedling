@@ -39,7 +39,7 @@ download original models (trained for MS COCO dataset):
 Download the models and config (trained on UGA 2015 and UGA 2018) and tuned based on the combined validation set of UGA 2015 and UGA 2018.
 (on Tesla v100)
 
-Q: Are these system independent? 
+Q: Are these (hardware) system independent? 
 A: @ TODO
 
 |model| maP| BFLOPS|weights|config|(widthxheight)|
@@ -56,7 +56,7 @@ A: @ TODO
 
 ### Hardware Benchmarks
 __Which is the best model for each device ?__
-@TODO
+@TODO 
 The following tests were performed during inference on the video 20 random videos from the dataset [here]()
 #### Computer: Jetson Nano
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
