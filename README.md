@@ -30,8 +30,13 @@ download network configuration file ```.cfg``` and weights ```.weights``` here: 
 |:---:|:----:|:---:|:----:|:----:|:----:|
 |Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
 |Yolov3-tiny-med||---||[weights](weights)|[cfg](cfg)|
-|Yolov3-tiny-small||---|[weights](weights)|[cfg](cfg)|
+|Yolov3-tiny-small||---||[weights](weights)|[cfg](cfg)|
 
+|model| maP| BFLOPS|FPS|weights|config|
+|:---:|:----:|:---:|:----:|:----:|:----:|
+|Yolov4-tiny-big||---||[weights](weights)|[cfg](cfg)|
+|Yolov4-tiny-med||---||[weights](weights)|[cfg](cfg)|
+|Yolov4-tiny-small||---||[weights](weights)|[cfg](cfg)|
 
 ### Computer: Jetson Nano
 |model| maP| BFLOPS|FPS|weights|config|
