@@ -20,12 +20,14 @@ or using the [Catkin Command Line Tools](http://catkin-tools.readthedocs.io/en/l
 
     catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
 
-## Get weights
-download network configuration file ```.cfg``` and weights ```.weights``` here: [https://pjreddie.com/darknet/yolo/
-(https://pjreddie.com/darknet/yolo/) or use your own trained network config and weights.
+## Models
+download original weights 
 
-@ TODO
-### Computer: Jetson Tx2
+<details><summary><b>HERE</b> - Yolo v4 models</summary>
+    * [yolov4-tiny.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg) - **40.2% mAP@0.5 - 371(1080Ti) FPS / 330(RTX2070) FPS** - 6.9            BFlops - 23.1 MB: [yolov4-tiny.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)
+</details>
+
+
 |model| maP| BFLOPS|FPS|weights|config|
 |:---:|:----:|:---:|:----:|:----:|:----:|
 |Yolov3-tiny-big||---||[weights](weights)|[cfg](cfg)|
