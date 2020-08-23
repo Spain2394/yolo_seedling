@@ -84,7 +84,7 @@ The following tests were performed during inference on the video 20 random video
 |Yolov4-tiny-med|FR|Power|RAM|
 |Yolov4-tiny-small|FR|Power|RAM| 
 
-#### Computer: SW10 w/ GTX
+#### Computer: SW10 w/ GTX 1060
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|FR|Power|RAM|
