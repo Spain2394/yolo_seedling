@@ -65,7 +65,7 @@ The following tests were performed during inference on the video 20 random video
 |Yolov3-tiny-med|2.7|4.5|3000|
 |Yolov3-tiny-small|5.6|4.4|2900| 
 
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov4-tiny-big|0.8|5.3|3700|
 |Yolov4-tiny-med|3.0|4.6|3100|
