@@ -50,9 +50,9 @@ A: @ TODO
 
 |model| maP| BFLOPS|weights|config|(widthxheight)|
 |:---:|:----:|:---:|:----:|:----:|:----:|
-|Yolov4-tiny-big|88.15%|60.095|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088) |
+|Yolov4-tiny-big|**88.15%**|60.095|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1p39wl-lUUccBxGz7aGpgD4dEWOQVk3WQXXs8EAY2S_A/edit?usp=sharing)|(1408x1088) |
 |Yolov4-tiny-med|68.24%|15.024|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1HdWCN7WIfpQ2COZNut9t5cZMQgxjQEI4j3Nxg0TE2g0/edit?usp=sharing)| (704x544) |
-|Yolov4-tiny-small|36.36%| 7.231|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|(480x384)|
+|Yolov4-tiny-small|36.36%|7.231|[weights](https://drive.google.com/file/d/1BIXNWMiF8v39TgSbskF-AlnljOo3Qnkr/view?usp=sharing)|[cfg](https://docs.google.com/document/d/1aCrKPIj1bOkYj0PCSKY0oR0qS8CVhuOjMVMpZu3Vam0/edit?usp=sharing)|(480x384)|
 
 ### Hardware Benchmarks
 __Which is the best model for each device ?__
@@ -63,13 +63,13 @@ The following tests were performed during inference on the video 20 random video
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|0.7|4.5|3300|
 |Yolov3-tiny-med|2.7|4.5|3000|
-|Yolov3-tiny-small|5.6|4.4|2900| 
+|Yolov3-tiny-small|5.6|4.4|**2900**| 
 
 |model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov4-tiny-big|0.8|5.3|3700|
 |Yolov4-tiny-med|3.0|4.6|3100|
-|Yolov4-tiny-small|6.2|4.6|2950| 
+|Yolov4-tiny-small|**6.2**|4.6|2950| 
 
 #### Computer: Jetson TX2
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
