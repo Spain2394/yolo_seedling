@@ -61,9 +61,9 @@ The following tests were performed during inference on the video 20 random video
 #### Computer: Jetson Nano
 |model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
-|Yolov3-tiny-big|0.7|**4.5**|3300|
-|Yolov3-tiny-med|2.7|**4.5**|3000|
-|Yolov3-tiny-small|5.6|4.4|**2900**| 
+|Yolov3-tiny-big|0.7|4.5|3300|
+|Yolov3-tiny-med|2.7|4.5|3000|
+|Yolov3-tiny-small|5.6|**4.4**|**2900**| 
 
 |model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
