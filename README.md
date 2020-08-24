@@ -59,17 +59,17 @@ __Which is the best model for each device ?__
 @TODO 
 The following tests were performed during inference on the video 20 random videos from the dataset [here]()
 #### Computer: Jetson Nano
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
-|Yolov3-tiny-big|FR|Power|RAM|
-|Yolov3-tiny-med|FR|Power|RAM|
-|Yolov3-tiny-small|FR|Power|RAM| 
+|Yolov3-tiny-big|0.7|4.5|3300|
+|Yolov3-tiny-med|2.7|4.5|3000|
+|Yolov3-tiny-small|5.6|4.4|2900| 
 
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
-|Yolov4-tiny-big|FR|Power|RAM|
-|Yolov4-tiny-med|FR|Power|RAM|
-|Yolov4-tiny-small|FR|Power|RAM| 
+|Yolov4-tiny-big|0.8|5.3|3700|
+|Yolov4-tiny-med|3.0|4.6|3100|
+|Yolov4-tiny-small|6.2|4.6|2950| 
 
 #### Computer: Jetson TX2
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
