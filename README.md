@@ -1,8 +1,8 @@
 # ```YOLO_Seedling``` :seedling:
-- Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10 and OpenCV4 with ROS melodic
-@TODO
-- Package tested on - NVIDIA GTX1060 
-- Package tested on - NVIDIA Jetson Nano
+- Package tested on - NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1] CUDA 10.0.326, cuDNN 7.6.3.28, OpenCV4 4.1.1 compiled w/ CUDA running in ROS melodic
+- Package tested on - NVIDIA System 76 w/ Nvidia GTX1060  @ TODO 
+- Package tested on - NVIDIA Jetson Nano - Jetpack 4.4 [L4T 32.4.2] CUDA 10.2.8, cuDNN 8.0.0.145, OpenCV4 4.1.1, Running ROS melodic
+
 - Purpose of this project: Real-time plant tracking using Yolov3/Yolov4 on edge devices
 
 ## Setup
