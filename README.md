@@ -96,7 +96,7 @@ The following tests were performed during inference on the video ~20s videos fro
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ROS Setup
-#### Image Stream
+### Image Stream
 run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
@@ -105,7 +105,7 @@ Note: you can view the camera topic by running: ```rqt_image_view```
 Configuration using [video_stream_opencv](https://wiki.ros.org/video_stream_opencv) or any camera reading that publishes ```[sensor_msgs/Image]```
 In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``` topic is set to ```videofile/image_raw``` for video feed and ```camera/image_raw``` for camera feed.
 
-#### Run 
+### Run 
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
 ### Credit
