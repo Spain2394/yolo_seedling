@@ -108,10 +108,11 @@ In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``
 #### Run 
 ```roslaunch darknet_ros plant_weed_yolo_v3_tiny.launch```
 
-#### Credit
+### Credit
 
 [pjreddie](https://github.com/pjreddie/darknet), [AlexeyAB](https://github.com/AlexeyAB/darknet) darknet
 
 [leggedrobotics (Marko Bjelonic)](https://github.com/leggedrobotics/darknet_ros) darknet_ros
 
 [abewley](https://github.com/abewley/sort) sort
+[nwojke][https://github.com/nwojke/deep_sort] deep sort
