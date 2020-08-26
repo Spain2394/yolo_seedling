@@ -96,7 +96,7 @@ The following tests were performed during inference on the video ~20s videos fro
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ROS Setup
-#### Camera
+#### Image Stream
 run with camera connected to ```dev/video<n>```  ```roslaunch video_stream_opencv camera.launch```
 run with video feed run: ```roslaunch video_stream_opencv video_file.launch```
 
