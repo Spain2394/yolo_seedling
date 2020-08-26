@@ -115,4 +115,5 @@ In ```~/catkin_ws/darknet_ros/config/ros.yaml``` make sure your ```camera_read``
 [leggedrobotics (Marko Bjelonic)](https://github.com/leggedrobotics/darknet_ros) darknet_ros
 
 [abewley](https://github.com/abewley/sort) sort
-[nwojke][https://github.com/nwojke/deep_sort] deep sort
+
+[nwojke](https://github.com/nwojke/deep_sort) deep sort
