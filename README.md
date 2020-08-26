@@ -71,15 +71,15 @@ The following tests were performed during inference on the video ~20s videos fro
 #### Computer: Jetson TX2
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
-|Yolov3-tiny-big|FR|Power|RAM|
-|Yolov3-tiny-med|FR|Power|RAM|
-|Yolov3-tiny-small|FR|Power|RAM| 
+|Yolov3-tiny-big|9.7|9.8|3400|
+|Yolov3-tiny-med|35.8|9.5|2750|
+|Yolov3-tiny-small|**75.1**|**9.4**|**2650**| 
 
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
-|Yolov4-tiny-big|FR|Power|RAM|
-|Yolov4-tiny-med|FR|Power|RAM|
-|Yolov4-tiny-small|FR|Power|RAM| 
+|Yolov4-tiny-big|5.5|12.1|3300|
+|Yolov4-tiny-med|19.8|11|2800|
+|Yolov4-tiny-small|39.5|11|2750| 
 
 #### Computer: SW10 w/ GTX 1060
 |model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
