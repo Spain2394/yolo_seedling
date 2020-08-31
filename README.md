@@ -56,39 +56,39 @@ __Which is the best model for each device ?__
 The following tests were performed during inference on the video ~20s videos from the UGA 2020, and UGA 2018 testing set.
 
 #### Computer: Jetson Nano
-|model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER(W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|0.7|4.5|3300|
 |Yolov3-tiny-med|2.7|4.5|3000|
 |Yolov3-tiny-small|5.6|**4.4**|**2900**| 
 
-|model| FR (FPS)| POWER MAX.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER (W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov4-tiny-big|0.8|5.3|3700|
 |Yolov4-tiny-med|3.0|4.6|3100|
 |Yolov4-tiny-small|**6.2**|4.6|2950| 
 
 #### Computer: Jetson TX2
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER (W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|9.7|9.8|3400|
 |Yolov3-tiny-med|35.8|9.5|2750|
 |Yolov3-tiny-small|**75.1**|**9.4**|**2650**| 
 
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER (W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov4-tiny-big|5.5|12.1|3300|
 |Yolov4-tiny-med|19.8|11|2800|
 |Yolov4-tiny-small|39.5|11|2750| 
 
 #### Computer: SW10 w/ GTX 1060
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER (W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov3-tiny-big|FR|Power|RAM|
 |Yolov3-tiny-med|FR|Power|RAM|
 |Yolov3-tiny-small|FR|Power|RAM| 
 
-|model| FR (FPS)| POWER AVG.(W)|RAM (MB)|
+|model| FR (FPS)| PEAK POWER (W)|RAM (MB)|
 |:---:|:----:|:---:|:----:|
 |Yolov4-tiny-big|FR|Power|RAM|
 |Yolov4-tiny-med|FR|Power|RAM|
