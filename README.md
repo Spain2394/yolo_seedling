@@ -9,6 +9,10 @@
 clone this ```darknet_ros``` into your ```~/catkin_ws/src```
 clone https://github.com/Spain2394/darknet_bckup into ```~/catkin_ws/src/darknet_ros```
 
+To run tracking in ROS 
+clone: https://github.com/Spain2394/sort-deepsort-yolov3-ROS
+And follow the respective readme for usage.
+
 ## Build 
 1. Ensure that you have compiled ```darknet_bckup``` seperately, you can do so by runnning ```cd ~/catkin_ws/src/darknet_ros/darknet_bckup``` and using ```make```
 
